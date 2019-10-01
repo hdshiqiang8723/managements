@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itch.demo.dao.UsersDao">
+    <select id="byname" resultType="int">
+        select id from users where uname=#{uname} and pwds=#{pwd}
+    </select>
+    <insert id="add">
+        insert into users value (#{users.id},#{users.uname},#{users.pwds})
+    </insert>
+    <update id="update">
+        update users
+        <set>
+            <if test="users.uname != null and users.uname !='' ">uname=#{users.uname}</if>
+            <if test="users.pwds != null and users.v !='' ">pwds=#{users.pwds}</if>
+        </set>
+        where id =#{users.id}
+    </update>
+    <delete id="detele">
+        delete from users where id =#{id}
+    </delete>
+
+</mapper>

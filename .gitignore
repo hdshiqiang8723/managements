@@ -54,11 +54,4 @@ build/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-src/main/resources/static/
-src/main/resources/templates/
-src/main/java/com/itch/demo/Controller/
-src/main/java/com/itch/demo/Service/
-src/main/java/com/itch/demo/dao/
-src/main/java/com/itch/demo/entity/
-src/main/resources/mapper/
 
